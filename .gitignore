@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# DATA
+data/VOC2007/*
+data/VOC2012/*
+data/labels/*
+data/voc*
+tests_data/*
+benchmarks/plots/*
+benchmarks/results.json
+
+# Virtual Environment
+venv/
+.env
+
+# Project Specific
+runs/
+datasets/
+test_datasets/
+*.pt
+*.engine
+*.torchscript
+
+# IDE
+.vscode/
+.idea/
+instruction.md
