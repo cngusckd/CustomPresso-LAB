@@ -58,8 +58,8 @@ def main():
         val_ds = VOCDataset(img_list_path=val_path, augment=False)
         
         # Windows/WSL: num_workers=0 is safest to avoid IPC errors / shared memory issues
-        train_loader = DataLoader(train_ds, batch_size=opt.batch_size, shuffle=True, collate_fn=custom_collate, num_workers=0)
-        val_loader = DataLoader(val_ds, batch_size=opt.batch_size, shuffle=False, collate_fn=custom_collate, num_workers=0)
+        train_loader = DataLoader(train_ds, batch_size=opt.batch_size, shuffle=True, collate_fn=custom_collate, num_workers=2)
+        val_loader = DataLoader(val_ds, batch_size=opt.batch_size, shuffle=False, collate_fn=custom_collate, num_workers=2)
         
         print(f"Train: {len(train_ds)} images, Val: {len(val_ds)} images")
         

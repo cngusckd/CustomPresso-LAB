@@ -64,7 +64,7 @@ class Trainer:
         print(f"Starting training for {self.epochs} epochs...")
         for epoch in range(self.epochs):
             self.model.train()
-            pbar = tqdm(self.train_loader, desc=f"Epoch {epoch+1}/{self.epochs}")
+            pbar = tqdm(self.train_loader, desc=f"Epoch {epoch+1}/{self.epochs}", ncols = 150)
             
             epoch_loss = 0
             for i, (imgs, targets) in enumerate(pbar):
